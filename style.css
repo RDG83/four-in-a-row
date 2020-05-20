@@ -11,9 +11,16 @@
     width: 100px;
     height: 100px;
     box-sizing: border-box;
-    border: 1px solid black;    
+    border: 1px solid black;
 }
 
-.taken {
+.p1 {
+    background-color: red;
+    border-radius: 50%;
+}
 
+.p2 {
+    background-color: blue;
+    border-radius: 50%;
+    border: 1px solid black;
 }
