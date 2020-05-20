@@ -1,0 +1,19 @@
+.container {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid black;    
+}
+
+.taken {
+
+}
