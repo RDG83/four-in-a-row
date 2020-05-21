@@ -6,10 +6,19 @@ const player = document.querySelector('.player');
 const winMessage = document.querySelector('#winmessage');
 const winContainer = document.querySelector('#wincontainer');
 const resetButton = document.querySelector('#resetbutton');
+const p1Score = document.querySelector('#p1score')
+const p2Score = document.querySelector('#p2score')
+const resetScoreBtn = document.querySelector('#resetscorebutton');
 
+let player1Score = 0;
+let player2Score = 0;
+
+p1Score.textContent = player1Score;
+p2Score.textContent = player2Score;
 player.textContent = currentPlayer;
 
-resetButton.addEventListener('click', resetGame)
+resetButton.addEventListener('click', resetGame);
+resetScoreBtn.addEventListener('click', resetScore);
 
 function setupGame() {
     for (let i = 1; i < 65; i++) {
@@ -76,6 +85,8 @@ function checkWin() {
         ) {
             winContainer.classList.toggle('showwinner')
             winMessage.textContent = 'Player 1 wins!';
+            player1Score++
+            p1Score.textContent = player1Score;
             removeListeners(squares);
         } else if (
 
@@ -87,6 +98,8 @@ function checkWin() {
         ) {
             winContainer.classList.toggle('showwinner')
             winMessage.textContent = 'Player 2 wins!';
+            player2Score++
+            p2Score.textContent = player2Score;
             removeListeners(squares);
         }
     }
@@ -101,6 +114,13 @@ function resetGame() {
     }
 
     setupGame();
+}
+
+function resetScore() {
+    player1Score = 0;
+    player2Score = 0;
+    p1Score.textContent = player1Score;
+    p2Score.textContent = player2Score;
 }
 
 function removeListeners(squares) {
