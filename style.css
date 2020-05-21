@@ -24,3 +24,11 @@
     border-radius: 50%;
     border: 1px solid black;
 }
+
+body {
+    text-align: center;
+}
+
+.showwinner {
+    display: none;
+}
