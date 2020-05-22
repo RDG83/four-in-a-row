@@ -72,10 +72,10 @@ function checkWin() {
     let squares = document.querySelectorAll('div');
 
     for (let i = 0; i < winPositions.length; i++) {
-        let square1 = winPositions[i][0]
-        let square2 = winPositions[i][1]
-        let square3 = winPositions[i][2]
-        let square4 = winPositions[i][3]
+        let square1 = (winPositions[i][0] + 1)
+        let square2 = (winPositions[i][1] + 1)
+        let square3 = (winPositions[i][2] + 1)
+        let square4 = (winPositions[i][3] + 1)
 
         if (
             squares[square1].classList.contains('p1') &&
